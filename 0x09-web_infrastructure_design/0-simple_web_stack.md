@@ -17,4 +17,3 @@ This is a simple web infrastucture of www.foobar.com, composed of LAMP (Linux, A
 -   Downtime when maintenance needed (like deploying new code web server needs to be restarted):- <br>
 Anytime you have to make some maintenace on the infrastructure, you have to put off one of the infrastructure which will lead to downtime for all the connected infrastructure.
 -   Cannot scale if too much incoming traffic:- <br>
-In this case, if requeste are being sent to the server and unfortunately it got to the peak that the server can not take in any request anymore, the server might crash.
