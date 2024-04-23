@@ -1,5 +1,16 @@
-# puppet ssh configuration
-exec { 'ssh_config':
-  path    => '/bin',
-  command => 'echo "PasswordAuthentication no" >> /etc/ssh/ssh_config; echo "IdentityFile ~/.ssh/school" >> /etc/ssh/ssh_config',
+# automating my client config files
+include stdlib
+
+file_line { 'Turn off passwd auth':
+  ensure  => present,
+  path    => '/etc/ssh/ssh_config',
+  line    => '    PasswordAuthentication no',
+  replace => true,
+}
+
+file_line { 'Delare identity file':
+  ensure  => present,
+  path    => '/etc/ssh/ssh_config',
+  line    => '     IdentityFile ~/.ssh/school',
+  replace => true,
 }
