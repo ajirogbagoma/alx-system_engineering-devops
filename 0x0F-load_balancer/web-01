@@ -1,0 +1,11 @@
+#!/usr/bion/env bash
+# Server-01 login commands
+
+# setting up the SSH-agemt
+eval $("ssh-agent")
+
+# path to IdentityFile
+ssh-add ~/.ssh/school
+
+# Username and IP Address
+ssh ubuntu@18.234.193.255
